@@ -22,7 +22,11 @@ gem install footy_data
 
 ## Usage
 
-This gem works with all of the endpoints documented at [football-data.org]("http://api.football-data.org/documentation")
+This gem works with all of the endpoints documented at [football-data.org]("http://api.football-data.org/documentation"). Register an API key and add the key by doing: 
+
+```ruby
+FootyData.api_key = "YOUR_KEY"
+```
 
 The Football-Data API has three main resources: Competition, Fixture, and Team, and these can be accessed via:
 

@@ -15,7 +15,7 @@ module FootyData
 
   def self.request(url,options)
     request_url = FootyData::API_URL + url + "?" + options.map {|k,v| "#{k}=#{v}"}.join("&")
-    headers = :headers => {"X-Auth-Token" => FootyData.api_key}
+    headers = {:headers => {"X-Auth-Token" => FootyData.api_key}}
     HTTParty.get(request_url,headers).parsed_response
   end
 end
